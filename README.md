@@ -1,15 +1,20 @@
 # Copaw Multi-Agent System
 
 > 🚀 基于 Copaw 框架的多智能体系统配置示例 - 软件工程师助手专属版本
+>
+> **⚠️ 声明：本项目基于 Copaw V0.0.5 版本构建**
 
 [![GitHub](https://img.shields.io/badge/GitHub-shengshengyi/copaw--multi--agent-blue)](https://github.com/shengshengyi/copaw-multi-agent)
+[![Copaw Version](https://img.shields.io/badge/Copaw-v0.0.5-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 ---
 
 ## 📋 项目简介
 
-本项目是 **Copaw 多智能体系统** 的配置示例，展示如何为特定场景（飞书群聊技术讨论）定制专属的 AI Agent。
+本项目是 **Copaw 多智能体系统** 的配置示例，基于 **Copaw V0.0.5** 版本构建，展示如何为特定场景（飞书群聊技术讨论）定制专属的 AI Agent。
+
+> **版本兼容性：** 本项目配置与 Copaw V0.0.5 完全兼容，使用更高版本时请注意 API 变更。
 
 通过本项目的配置，你可以快速部署一个专注于技术咨询的「软件工程师助手」，它能够：
 - 🔍 自动响应群聊中的技术问题
