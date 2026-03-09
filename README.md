@@ -1,20 +1,29 @@
 # Copaw Multi-Agent System
 
-> 🚀 基于 Copaw 框架的多智能体系统配置示例 - 软件工程师助手专属版本
+> 🚀 基于 [CoPaw](https://github.com/agentscope-ai/CoPaw) 框架的多智能体系统配置示例 - 软件工程师助手专属版本
 >
-> **⚠️ 声明：本项目基于 Copaw V0.0.5 版本构建**
+> **⚠️ 声明：本项目是基于 CoPaw V0.0.5 的 Agent 配置文件集合，非 CoPaw 框架本身**
 
 [![GitHub](https://img.shields.io/badge/GitHub-shengshengyi/copaw--multi--agent-blue)](https://github.com/shengshengyi/copaw-multi-agent)
-[![Copaw Version](https://img.shields.io/badge/Copaw-v0.0.5-orange.svg)]()
+[![CoPaw](https://img.shields.io/badge/🐾_CoPaw-v0.0.5-orange.svg)](https://github.com/agentscope-ai/CoPaw)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 ---
 
 ## 📋 项目简介
 
-本项目是 **Copaw 多智能体系统** 的配置示例，基于 **Copaw V0.0.5** 版本构建，展示如何为特定场景（飞书群聊技术讨论）定制专属的 AI Agent。
+本项目是 **[CoPaw](https://github.com/agentscope-ai/CoPaw)** 多智能体系统的**Agent 配置示例**，基于 **CoPaw V0.0.5** 版本构建，展示如何为特定场景（飞书群聊技术讨论）定制专属的 AI Agent。
 
-> **版本兼容性：** 本项目配置与 Copaw V0.0.5 完全兼容，使用更高版本时请注意 API 变更。
+### 与 CoPaw 的关系
+
+| 项目 | 类型 | 说明 |
+|------|------|------|
+| **[CoPaw](https://github.com/agentscope-ai/CoPaw)** | 框架 | 阿里云通义实验室开源的 AI 助手框架 |
+| **本项目** | 配置 | 基于 CoPaw 框架的 Agent 角色配置和记忆文件 |
+
+> **使用前提：** 需要先安装 CoPaw 框架，然后将本项目的配置文件放入 CoPaw 的工作目录中。
+
+> **版本兼容性：** 本项目配置与 CoPaw V0.0.5 完全兼容，使用更高版本时请注意 API 变更。
 
 通过本项目的配置，你可以快速部署一个专注于技术咨询的「软件工程师助手」，它能够：
 - 🔍 自动响应群聊中的技术问题
@@ -142,20 +151,80 @@ copaw-multi-agent/
 
 ---
 
+## 🍴 Fork 与使用
+
+本项目采用与 [lincolnzhouzi/CoPaw](https://github.com/lincolnzhouzi/CoPaw) 类似的 Fork 模式：
+
+### 使用方式
+
+1. **Fork 本仓库** 到自己的 GitHub 账户
+2. **克隆到本地** CoPaw 工作目录
+3. **自定义配置** 修改 Agent 角色和记忆
+4. **提交更改** 推送到自己的 Fork
+
+```bash
+# 1. 在 GitHub 上 Fork 本仓库
+# 2. 克隆你的 Fork
+git clone https://github.com/YOUR_USERNAME/copaw-multi-agent.git
+
+# 3. 复制到 CoPaw 工作目录（或直接在 CoPaw 工作目录中使用）
+cd copaw-multi-agent
+
+# 4. 修改配置后提交
+git add .
+git commit -m "customize: 自定义 Agent 配置"
+git push origin main
+```
+
+### 与 CoPaw 框架的关系
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    CoPaw 框架                            │
+│         (agentscope-ai/CoPaw)                           │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │   核心引擎   │  │   控制台    │  │   频道适配   │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+                            ▲
+                            │ 加载
+┌─────────────────────────────────────────────────────────┐
+│              本项目 (Agent 配置)                         │
+│         (shengshengyi/copaw-multi-agent)                │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+│  │ AGENT_CONFIG│  │   SOUL.md   │  │  MEMORY.md  │     │
+│  └─────────────┘  └─────────────┘  └─────────────┘     │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## 🚀 快速开始
 
 ### 前提条件
 
 - Python 3.8+
-- Copaw 框架已安装
+- [CoPaw](https://github.com/agentscope-ai/CoPaw) 框架已安装
 - 飞书机器人已创建并获取相关凭证
 
 ### 安装步骤
 
-1. **克隆仓库**
+1. **安装 CoPaw 框架**
    ```bash
-   git clone https://github.com/shengshengyi/copaw-multi-agent.git
-   cd copaw-multi-agent
+   pip install copaw
+   copaw init --defaults
+   ```
+
+2. **克隆本仓库到 CoPaw 工作目录**
+   ```bash
+   # 进入 CoPaw 工作目录
+   cd ~/.copaw/workspaces/software
+   
+   # 备份原有配置（可选）
+   mv . ../software_backup
+   
+   # 克隆本项目
+   git clone https://github.com/shengshengyi/copaw-multi-agent.git .
    ```
 
 2. **配置环境变量**
