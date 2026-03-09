@@ -29,13 +29,20 @@
 
 ### 飞书群聊集成效果
 
+![多Agent效果展示](docs/images/multi-agent-demo.jpg)
+
+上图展示了 **Copaw Multi-Agent System** 在飞书群聊中的实际运行效果：
+- **软件工程师助手** - 响应技术问题
+- **产品经理助手** - 处理产品相关咨询
+- **招聘专员机器人** - 协助招聘流程
+
 | 场景 | 截图 |
 |------|------|
 | **代码审查** | ![代码审查](docs/images/code-review.png) |
 | **Bug定位** | ![Bug定位](docs/images/bug-fix.png) |
 | **架构讨论** | ![架构讨论](docs/images/architecture.png) |
 
-> 💡 **提示：** 上图仅为示意图，实际效果请部署后查看。
+> 💡 **提示：** 部分图片为占位符，实际效果请部署后查看。
 
 ### Agent响应流程
 
